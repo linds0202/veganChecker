@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Ingredient Checker</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<h1>Which product?</h1>
+
+		<label for="barcode">Enter a 12 digit UPC barcode for a product: </label>
+		<input type="number" id="barcode" name="barcode">
+		
+		<button type="button" onclick="getFetch();">Check Ingredients</button>
+
+		<img id="product-image" src="" alt="">
+		<h2>Name</h2>
+
+		<h3>Gluten free?</h3><span></span>
+		<p id="gluten-free"></p>
+
+		<table id="ingredients-table">
+			<tr>
+				<th>Ingredient</th>
+				<th>Vegan?</th>
+			</tr>
+		</table>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
