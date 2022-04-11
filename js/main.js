@@ -36,10 +36,17 @@ class ProductInfo {
   showInfo() {
     document.querySelector('h2').innerText = this.name
     document.getElementById('product-image').src = this.image
-    if (this.gluten.includes('Gluten-free')) {
-      document.querySelector('span').innerText = 'YES'
+    if (!(this.gluten == null)) {
+      if (this.gluten.includes('Gluten-free')) {
+        document.getElementById('gluten-free').innerText = 'YES'
+        document.getElementById('gluten-free').style.backgroundColor = 'green'
+      } else {
+        document.getElementById('gluten-free').innerText = 'NO'
+        document.getElementById('gluten-free').style.backgroundColor = '#F26101'
+      } 
     } else {
-      document.querySelector('span').innerText = 'NO'
+      document.getElementById('gluten-free').innerText = 'Unknown'
+      document.getElementById('gluten-free').style.backgroundColor = '#FFF'
     }
   }
 
